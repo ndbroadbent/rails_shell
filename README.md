@@ -1,6 +1,6 @@
 # Rails Shell
 
-Shell aliases, functions and tab completion for Rails development, extracted from my [dotfiles](https://github.com/ndbroadbent/dotfiles).
+Aliases, functions and tab completion for Rails development, extracted from my [dotfiles](https://github.com/ndbroadbent/dotfiles).
 
 ### Only Bash for now, ZSH support soon.
 
