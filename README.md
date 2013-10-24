@@ -83,7 +83,7 @@ If you run a command that fails because bundler can't find a gem,
 | rpl | rake parallel:load_schema |
 | rpls | rake parallel:load_schema parallel:spec |
 
-The `parallel:` aliases are for the [parallel_tests](https://github.com/grosser/parallel_tests) gem. Your CPU cores will be automatically detected.
+The `parallel:` aliases are for the [parallel_tests](https://github.com/grosser/parallel_tests) gem.
 
 ### Bundler / Rubygems
 
