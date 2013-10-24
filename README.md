@@ -57,7 +57,7 @@ If you run a command that fails because bundler can't find a gem,
 | Alias         | Command |
 | ------------: | :------------- |
 | rs | rails server |
-| rs\<1-9> | rails server -p 300\<n>  # e.g. `rs1` => `-p 3001` |
+| rs\<1-9> | rails server -p 300*   (`rs1` => `-p 3001`) |
 | rc | rails console |
 | rg | rails generate |
 | rsd | rails server -u (debug) |
