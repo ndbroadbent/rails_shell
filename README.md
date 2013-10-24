@@ -57,14 +57,13 @@ If you run a command that fails because bundler can't find a gem,
 | Alias         | Command |
 | ------------: | :------------- |
 | rs | rails server |
+| rs\<1-9> | rails server -p 300\<n>  # e.g. `rs1` => `-p 3001` |
+| rc | rails console |
+| rg | rails generate |
 | rsd | rails server -u (debug) |
 | rdb | rails dbconsole |
-| rc | rails console |
 | ru | rails runner |
-| rg | rails generate |
-| rs\<1-9> | rails server -p 300\<n> |
 
-`rs<1-9>` starts the Rails server on a port between *3001* and *3009*. Useful if you need to develop multiple Rails apps simultaneously.
 
 ### Rake
 
