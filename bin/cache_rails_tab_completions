@@ -1,5 +1,5 @@
 #!/bin/bash -l
-REVISION_FILE=".cached_tab_completions_revision~"
+REVISION_FILE=".cached_completions_revision~"
 
 GIT_BINARY="$(which git)"
 git_exclude() {
