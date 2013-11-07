@@ -46,7 +46,7 @@ fi
 # Rake completions
 for file in Rakefile rakefile Rakefile.rb rakefile.rb; do
   if [ -e $file ]; then
-    git_exclude "$RAKE_COMP_FILEf"
+    git_exclude "$RAKE_COMP_FILE"
 
     # Fetch rake commands and store in file
     echo "Caching Rake commands for $(basename $(pwd))..."
