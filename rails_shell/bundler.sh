@@ -47,8 +47,8 @@ for c in $bundled_commands; do
   alias $c="bundle_exec_if_possible $c"
 done
 
-alias b="ensure_bundler; bundle --jobs=$CORES_NUM"
-alias bi="ensure_bundler; bundle install --jobs=$CORES_NUM"
+alias b="ensure_bundler; bundle --jobs=$ACTUAL_CPU_CORES"
+alias bi="ensure_bundler; bundle install --jobs=$ACTUAL_CPU_CORES"
 alias bu="ensure_bundler; bundle update"
 alias be="ensure_bundler; bundle exec"
 alias bl="ensure_bundler; bundle list"
