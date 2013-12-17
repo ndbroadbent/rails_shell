@@ -56,14 +56,16 @@ If you run a command that fails because bundler can't find a gem,
 
 | Alias         | Command |
 | ------------: | :------------- |
-| rs | rails server |
-| rs\<1-9> | rails server -p 300*   (`rs1` => `-p 3001`) |
+| rs | rails server --binding=127.0.0.1 |
+| rs\<1-9> | rails server --binding=127.0.0. -p 300*   (`rs1` => `-p 3001`) |
 | rc | rails console |
 | rg | rails generate |
 | rsd | rails server -u (debug) |
 | rdb | rails dbconsole |
 | ru | rails runner |
 
+We always start the Rails server bound to 127.0.0.1, so that your app cannot be accessed from anyone on your network.
+Otherwise, this can be a big security risk.
 
 ### Rake
 
