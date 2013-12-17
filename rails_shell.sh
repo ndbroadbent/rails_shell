@@ -13,9 +13,9 @@ else
   CPU_CORES="$(nproc)"
 fi
 ACTUAL_CPU_CORES=$CPU_CORES
-# Some parallel tasks run faster when only using actual CPU cores (instead of hyper-threads)
-if [ $CPU_CORES = 8 ]; then ACTUAL_CPU_CORES=4; fi
-if [ $CPU_CORES = 4 ]; then ACTUAL_CPU_CORES=2; fi
+# # Some parallel tasks run faster when only using actual CPU cores (instead of hyper-threads)
+# if [ $CPU_CORES = 8 ]; then ACTUAL_CPU_CORES=4; fi
+# if [ $CPU_CORES = 4 ]; then ACTUAL_CPU_CORES=2; fi
 
 source "$RAILS_SHELL_DIR/rails_shell/capistrano.sh"
 source "$RAILS_SHELL_DIR/rails_shell/bundler.sh"
