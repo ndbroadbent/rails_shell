@@ -6,3 +6,5 @@ zeus_if_possible() {
     bundle_install_wrapper "$@"
   fi
 }
+
+alias rspec="zeus_if_possible rspec"
