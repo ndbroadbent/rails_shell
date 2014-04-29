@@ -13,6 +13,6 @@ alias  rsp="zeus_if_possible rake spec"
 alias  rts="zeus_if_possible rake test"
 
 # Aliases for https://github.com/grosser/parallel_tests
-alias rps="rake parallel:spec[$ACTUAL_CPU_CORES]"
-alias rpl="rake parallel:load_schema[$ACTUAL_CPU_CORES]"
-alias rpls="rake parallel:load_schema[$ACTUAL_CPU_CORES] parallel:spec[$ACTUAL_CPU_CORES]"
+alias rps="zeus_if_possible rake parallel:spec[$ACTUAL_CPU_CORES]"
+alias rpl="zeus_if_possible rake parallel:load_schema[$ACTUAL_CPU_CORES]"
+alias rpls="zeus_if_possible rake parallel:load_schema[$ACTUAL_CPU_CORES] parallel:spec[$ACTUAL_CPU_CORES]"
