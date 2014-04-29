@@ -17,8 +17,9 @@ ACTUAL_CPU_CORES=$CPU_CORES
 # if [ $CPU_CORES = 8 ]; then ACTUAL_CPU_CORES=4; fi
 # if [ $CPU_CORES = 4 ]; then ACTUAL_CPU_CORES=2; fi
 
-source "$RAILS_SHELL_DIR/rails_shell/capistrano.sh"
 source "$RAILS_SHELL_DIR/rails_shell/bundler.sh"
+source "$RAILS_SHELL_DIR/rails_shell/zeus.sh"
+source "$RAILS_SHELL_DIR/rails_shell/capistrano.sh"
 source "$RAILS_SHELL_DIR/rails_shell/rubygems.sh"
 source "$RAILS_SHELL_DIR/rails_shell/rails.sh"
 source "$RAILS_SHELL_DIR/rails_shell/rake.sh"
