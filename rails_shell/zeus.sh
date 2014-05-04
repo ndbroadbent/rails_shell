@@ -3,7 +3,7 @@ zeus_if_possible() {
   if [ -e .zeus.sock ]; then
     bundle_install_wrapper zeus "$@"
   else
-    bundle_install_wrapper "$@"
+    "$@"
   fi
 }
 
