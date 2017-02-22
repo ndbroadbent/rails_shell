@@ -1,9 +1,7 @@
 # Run Rails commands on any version
 rails_cmd(){
-  # Zeus
-  if [ -e .zeus.sock ]; then bundle_install_wrapper zeus "$@"
   # Rails 3
-  elif [ -e ./script/rails ]; then bundle_install_wrapper rails3_with_editor "$@"
+  if [ -e ./script/rails ]; then bundle_install_wrapper rails3_with_editor "$@"
   # Rails <= 2
   elif [ -e ./script/$1 ]; then bundle_install_wrapper "./script/$@"
   # Rails 4
