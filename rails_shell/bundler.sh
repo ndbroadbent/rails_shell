@@ -25,7 +25,7 @@ bundle_exec_if_possible() {
 bundle_install_wrapper() {
   ensure_bundler
   # Try running command
-  eval "$@"
+  $@
   if [ $? = 7 ]; then
     # If command crashes, try a bundle install
     echo -e "\033[1;31m'$@' failed with exit code 7."
@@ -41,7 +41,9 @@ bundle_install_wrapper() {
 }
 
 # The following is based on https://github.com/gma/bundler-exec
-bundled_commands="annotate berks cap capify cucumber foodcritic foreman guard jekyll kitchen knife middleman nanoc rackup rainbows shotgun spec spin spork strainer tailor taps thin thor unicorn unicorn_rails puma"
+bundled_commands="annotate berks cap capify cucumber foodcritic foreman \
+  guard jekyll kitchen knife middleman nanoc rackup rainbows shotgun spec \
+  spin spork strainer tailor taps thin thor unicorn unicorn_rails puma"
 for cmd in $bundled_commands; do
   alias $cmd="bundle_exec_if_possible $cmd"
 done
