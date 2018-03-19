@@ -13,15 +13,24 @@ is_rails_app() {
   [ -e ./script/rails ] || [ -e ./script/$1 ] || ([ -e ./config.ru ] && grep -q Rails ./config.ru)
 }
 
-alias   rs="rails_cmd server --binding=127.0.0.1"
-alias  rsd="rails_cmd server --binding=127.0.0.1 -u"
+start_rails_server_on_available_port() {
+  for p in $(seq 3000 3099); do
+    if ! pgrep -qf "127\.0\.0\.1:$p"; then
+      rails_cmd server --binding=127.0.0.1 -p $p "$@"
+      break
+    fi
+  done
+}
+
+alias   rs="start_rails_server_on_available_port"
+alias  rsd="start_rails_server_on_available_port -u"
 alias   rc="rails_cmd console"
 alias  rdb="rails_cmd dbconsole"
 alias   rg="rails_cmd generate"
 alias   ru="rails_cmd runner"
 
 # Aliases for running Rails on different ports
-for p in $(seq 1 9); do
-  alias "rs$p"="rails_cmd server --binding=127.0.0.1 -p 300$p"
-  alias "rsd$p"="rails_cmd server --binding=127.0.0.1 -u -p 300$p"
+for p in $(seq 3001 3009); do
+  alias "rs$p"="rails_cmd server --binding=127.0.0.1 -p $p"
+  alias "rsd$p"="rails_cmd server --binding=127.0.0.1 -u -p $p"
 done
